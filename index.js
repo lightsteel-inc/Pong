@@ -30,7 +30,7 @@ var Paddle2X;
   function move() {
       BallX += 3
   }
-var loop = function() { 
+//var loop = function() { 
   function controller(evt) {
     switch(evt.keyCode) {
     case 87:
@@ -40,8 +40,8 @@ var loop = function() {
       Paddle1Y += 10;
         break;
       }
-  }
-}
+    }
+//}
   function collision() {
     if(BallX > canvas.width) {
       BallX -= 3
