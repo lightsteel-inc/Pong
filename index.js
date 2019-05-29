@@ -31,10 +31,10 @@ var Paddle2Y;
   function controller(evt) {
     switch(evt.keyCode) {
     case 87:
-        Paddle1Y -= 4;
+        Paddle1Y -= 10;
         break;
     case 83:
-      Paddle1Y += 4;
+      Paddle1Y += 10;
         break;
       }
   }
