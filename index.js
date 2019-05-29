@@ -3,6 +3,8 @@ var ctx;
 var BallX;
 var Paddle1X;
 var Paddle2Y;
+var Paddle1Y;
+var Paddle2X;
 
   window.onload = function() {
     canvas = document.getElementById('canvas');
