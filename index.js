@@ -52,6 +52,11 @@ var Ball;
 //}
   function collision() {
     if(BallX > canvas.width) {
-      BallX -= 3
+      Ball = false
+    } else if(Ball < 0)
+    {
+      Ball = true
     }
-  }
+}
+    
+    
