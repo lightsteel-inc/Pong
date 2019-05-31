@@ -30,22 +30,6 @@ var Ball;
     ctx.closePath();
 }
 
-function rect(x, y, width, height, color) {
-    this.width = width || 50;
-    this.height = height || 50;
-    this.x = x || 0;
-    this.y = y || 0;
-    this.color = color || 'black';
-    this.stop = false;
-    (this.refresh = ()=>{
-        yat.save();
-        yat.translate(this.x, this.y);
-        yat.rotate(this.angle);
-        yat.fillStyle = color;
-        yat.fillRect(this.width / -2, this.height / -2, this.width, this.height);
-        yat.restore();
-    }
-     
   function move() {
       if(Ball)
       {
@@ -74,9 +58,6 @@ function rect(x, y, width, height, color) {
     {
       Ball = true
     }
-   var ob = [
-     new rect(0,0,200,25) //top boundary
-     ];
 }
     
     
