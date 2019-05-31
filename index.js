@@ -38,6 +38,12 @@ var Ball;
       {
       Ball -= 3
       }
+        if(BallX > canvas.width) {
+      Ball = false
+    } else if(Ball < 0)
+    {
+      Ball = true
+    }
   }
 //var loop = function() { 
   function controller(evt) {
@@ -52,12 +58,7 @@ var Ball;
     }
 //}
   function collision() {
-    if(BallX > canvas.width) {
-      Ball = false
-    } else if(Ball < 0)
-    {
-      Ball = true
-    }
+
 }
     
     
