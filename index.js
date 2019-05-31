@@ -5,6 +5,7 @@ var Paddle1X;
 var Paddle2Y;
 var Paddle1Y;
 var Paddle2X;
+var Ball;
 
   window.onload = function() {
     canvas = document.getElementById('canvas');
@@ -14,6 +15,7 @@ var Paddle2X;
     BallX = 250;
     Paddle1Y = 200;
     Paddle2Y = 200;
+    Ball = true;
   };
   function draw() {
 
@@ -28,7 +30,13 @@ var Paddle2X;
     ctx.closePath();
 }
   function move() {
-      BallX += 3
+      if(Ball)
+      {
+        BallX += 3
+      } else 
+      {
+      Ball -= 3
+      }
   }
 //var loop = function() { 
   function controller(evt) {
