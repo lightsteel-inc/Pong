@@ -45,7 +45,8 @@ var Ball;
       Ball = true
     }
   } 
-  function controller(evt) {
+  function controller(evt) 
+{
     switch(evt.keyCode) {
     case 87:
         Paddle1Y -= 10;
@@ -62,8 +63,8 @@ var Ball;
         ((a.x + a.width) < b.x) ||
         (a.x > (b.x + b.width))
    );
+ }
        */ //collision setup
-}
 
 }
     
