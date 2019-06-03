@@ -44,8 +44,7 @@ var Ball;
     {
       Ball = true
     }
-  }
-//var loop = function() { 
+  } 
   function controller(evt) {
     switch(evt.keyCode) {
     case 87:
@@ -56,7 +55,6 @@ var Ball;
         break;
       }
     }
-//}
  /* function collision(a, b) {
     return !(
         ((a.y + a.height) < (b.y)) ||
