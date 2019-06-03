@@ -10,7 +10,7 @@ var Ball;
   window.onload = function() {
     canvas = document.getElementById('canvas');
     ctx = canvas.getContext('2d');
-    setInterval(function() {draw(); collision(); move();}, 1000/60);
+    setInterval(function() {draw();move();}, 1000/60);
     document.addEventListener("keydown",controller);
     BallX = 250;
     Paddle1Y = 200;
