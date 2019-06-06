@@ -31,10 +31,10 @@ var Ball;
 }
 
   function move() {
-      if(Ball)
+      if(!Ball)
       {
-        BallX += 3
-      } else 
+        BallX -= 3
+      } else if (Ball)
       {
       Ball -= 3
       }
