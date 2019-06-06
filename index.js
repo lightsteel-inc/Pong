@@ -1,6 +1,7 @@
 var canvas;
 var ctx;
 var BallX;
+var BallY;
 var Paddle1X;
 var Paddle2Y;
 var Paddle1Y;
@@ -13,6 +14,7 @@ var Ball;
     setInterval(function() {draw();move();}, 1000/60);
     document.addEventListener("keydown",controller);
     BallX = 250;
+    BallY = 250;
     Paddle1Y = 200;
     Paddle2Y = 200;
     Ball = true;
@@ -38,9 +40,9 @@ var Ball;
       {
       BallX += 3
       }
-        if(BallX > canvas.width) {
+        if(RectCircleColliding({x:BallX,y:BallY,r:10},{x:480,y:Paddle2Y,w:10,h:100})) {
       Ball = false
-    } else if(BallX < 0)
+    } else if(RectCircleColliding({x:BallX,y:BallY,r:10},{x:10,y:Paddle1Y,w:10,h:100}))
     {
       Ball = true
     }
