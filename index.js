@@ -36,11 +36,11 @@ var Ball;
         BallX -= 3
       } else if (Ball)
       {
-      Ball -= 3
+      BallX += 3
       }
         if(BallX > canvas.width) {
       Ball = false
-    } else if(Ball < 0)
+    } else if(BallX < 0)
     {
       Ball = true
     }
