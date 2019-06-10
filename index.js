@@ -29,7 +29,7 @@ var Balltwo
     ctx.fillRect(10,Paddle1Y,10,100);
     ctx.fillRect(480,Paddle2Y,10,100);
     ctx.beginPath()
-    ctx.arc(BallX,BallY,0, 2 * Math.PI, true);
+    ctx.arc(BallX, BallY, 0, 2 * Math.PI, true);
     ctx.fill()
     ctx.closePath();
 }
@@ -64,9 +64,9 @@ var Balltwo
         BallX = 250
    }
     if(BallY > canvas.height) {
-       Balltwo = true
-    } else if (BallY < 0) {
        Balltwo = false
+    } else if (BallY < 0) {
+       Balltwo = true
     }
   }//end of function move
 
