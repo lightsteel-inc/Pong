@@ -29,37 +29,31 @@ var Balltwo
     ctx.fillRect(10,Paddle1Y,10,100);
     ctx.fillRect(480,Paddle2Y,10,100);
     ctx.beginPath()
-    ctx.arc(BallX, BallY, 0, 2 * Math.PI, true);
+    ctx.arc(BallX,BallY, 75, 50, 0, 2 * Math.PI);
     ctx.fill()
     ctx.closePath();
 }
 
   function move() {
-      if(!Ballone)
-      {
+      if(!Ballone) {
         BallX -= 3
-      } else if (Ballone)
-      {
+      } else if (Ballone){
       BallX += 3
       }
-    if(!Balltwo)
-      {
+    if(!Balltwo) {
         BallY -= 3
-      } else if (Balltwo)
-      {
+      } else if (Balltwo) {
       BallY += 3
       }
     
       if(RectCircleColliding({x:BallX,y:BallY,r:10},{x:480,y:Paddle2Y,w:10,h:100})) {
       Ballone = false
-    } else if(RectCircleColliding({x:BallX,y:BallY,r:10},{x:10,y:Paddle1Y,w:10,h:100}))
-    {
+    } else if(RectCircleColliding({x:BallX,y:BallY,r:10},{x:10,y:Paddle1Y,w:10,h:100})) {
       Ballone = true
     }
    if(BallX < 0 ) {
         BallX = 250
    }
-       Paddle2Y = BallY
        if(BallX > canvas.width ) {
         BallX = 250
    }
@@ -68,6 +62,8 @@ var Balltwo
     } else if (BallY < 0) {
        Balltwo = false
     }
+    Paddle2Y = BallY
+
   }//end of function move
 
   function controller(evt) 
