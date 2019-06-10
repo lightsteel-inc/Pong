@@ -27,12 +27,13 @@ var Ball;
     ctx.fillRect(10,Paddle1Y,10,100);
     ctx.fillRect(480,Paddle2Y,10,100);
     ctx.beginPath()
-    ctx.arc(BallX, 250, 10, 0, 2 * Math.PI, true);
+    ctx.arc(BallX,BallY,0, 2 * Math.PI, true);
     ctx.fill()
     ctx.closePath();
 }
 
   function move() {
+      BallY += 5
       if(!Ball)
       {
         BallX -= 3
@@ -49,7 +50,13 @@ var Ball;
    if(BallX < 0 ) {
         BallX = 250
    }
-  } 
+       if(BallX > canvas.width ) {
+        BallX = 250
+   }
+    if(BallX > 300) {
+       Paddle2Y = BallY
+    }
+  }
   function controller(evt) 
 {
     switch(evt.keyCode) {
