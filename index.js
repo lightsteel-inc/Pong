@@ -63,7 +63,7 @@ var Balltwo
        if(BallX > canvas.width ) {
         BallX = 250
    }
-    if(BallY > canvas.height) {
+    if(BallY > 500) {
        Balltwo = false
     } else if (BallY < 0) {
        Balltwo = true
