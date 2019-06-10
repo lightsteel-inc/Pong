@@ -64,9 +64,9 @@ var Balltwo
         BallX = 250
    }
     if(BallY > 500) {
-       Balltwo = false
-    } else if (BallY < 0) {
        Balltwo = true
+    } else if (BallY < 0) {
+       Balltwo = false
     }
   }//end of function move
 
