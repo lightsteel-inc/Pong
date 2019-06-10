@@ -6,7 +6,8 @@ var Paddle1X;
 var Paddle2Y;
 var Paddle1Y;
 var Paddle2X;
-var Ball;
+var Ballone;
+var Balltwo
 
   window.onload = function() {
     canvas = document.getElementById('canvas');
@@ -17,7 +18,8 @@ var Ball;
     BallY = 250;
     Paddle1Y = 200;
     Paddle2Y = 200;
-    Ball = true;
+    Ballone = true;
+    Balltwo = true;
   };
   function draw() {
 
@@ -33,30 +35,41 @@ var Ball;
 }
 
   function move() {
-      BallY += 5
-      if(!Ball)
+      if(!Ballone)
       {
         BallX -= 3
-      } else if (Ball)
+      } else if (Ballone)
       {
       BallX += 3
       }
+    if(!Balltwo)
+      {
+        BallY -= 3
+      } else if (Balltwo)
+      {
+      BallY += 3
+      }
+    
       if(RectCircleColliding({x:BallX,y:BallY,r:10},{x:480,y:Paddle2Y,w:10,h:100})) {
-      Ball = false
+      Ballone = false
     } else if(RectCircleColliding({x:BallX,y:BallY,r:10},{x:10,y:Paddle1Y,w:10,h:100}))
     {
-      Ball = true
+      Ballone = true
     }
    if(BallX < 0 ) {
         BallX = 250
    }
+       Paddle2Y = BallY
        if(BallX > canvas.width ) {
         BallX = 250
    }
-    if(BallX > 300) {
-       Paddle2Y = BallY
+    if(BallY > camvas.height) {
+       BallY = false
+    } else if (BallY < 0) {
+       BallY = true
     }
-  }
+  }//end of function move
+
   function controller(evt) 
 {
     switch(evt.keyCode) {
@@ -91,6 +104,16 @@ function RectCircleColliding(circle,rect){
    );
  }
        */ //collision setup
+
+
+
+
+
+
+
+
+
+
 
 
 
