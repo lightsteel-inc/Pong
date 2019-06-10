@@ -64,9 +64,9 @@ var Balltwo
         BallX = 250
    }
     if(BallY > canvas.height) {
-       BallY = true
+       Balltwo = true
     } else if (BallY < 0) {
-       BallY = false
+       Balltwo = false
     }
   }//end of function move
 
