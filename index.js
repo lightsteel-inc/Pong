@@ -29,7 +29,7 @@ var Balltwo
     ctx.fillRect(10,Paddle1Y,10,100);
     ctx.fillRect(480,Paddle2Y,10,100);
     ctx.beginPath()
-    ctx.arc(BallX,BallY, 10, 2, 2 * Math.PI);
+    ctx.arc(BallX,BallY, 10, 0, 2 * Math.PI);
     ctx.fill()
     ctx.closePath();
 }
