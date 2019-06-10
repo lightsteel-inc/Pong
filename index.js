@@ -40,12 +40,15 @@ var Ball;
       {
       BallX += 3
       }
-        if(RectCircleColliding({x:BallX,y:BallY,r:10},{x:480,y:Paddle2Y,w:10,h:100})) {
+      if(RectCircleColliding({x:BallX,y:BallY,r:10},{x:480,y:Paddle2Y,w:10,h:100})) {
       Ball = false
     } else if(RectCircleColliding({x:BallX,y:BallY,r:10},{x:10,y:Paddle1Y,w:10,h:100}))
     {
       Ball = true
     }
+   if(BallX < 0 ) {
+        BallX = 250
+   }
   } 
   function controller(evt) 
 {
