@@ -57,10 +57,10 @@ var Balltwo
        if(BallX > canvas.width ) {
         BallX = 250
    }
-    if(BallY < canvas.height) {
-       Balltwo = true
-    } else if (BallY < 0) {
+    if(BallY > canvas.height) {
        Balltwo = false
+    } else if (BallY > 0) {
+       Balltwo = true
     }
     Paddle2Y = BallY
 
