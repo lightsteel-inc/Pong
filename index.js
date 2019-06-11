@@ -59,11 +59,9 @@ var Balltwo
    }
     if(BallY > canvas.height) {
        Balltwo = false
-    } 
-    if (BallY > 0) {
+    } else if (BallY > 0) {
        Balltwo = true
     }
-    Paddle2Y = BallY
 
   }//end of function move
 
